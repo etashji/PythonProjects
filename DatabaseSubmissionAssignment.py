@@ -11,13 +11,13 @@ with conn:
 
 fileList = ('information.docx', 'Hello.txt', 'myImage.png',\
             'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
-import glob
-for file in glob.glob("*.txt"):
-    with conn:
-        cur = conn.cursor()
-        cur.execute('INSERT INTO tbl_table(col_filenames) VALUES (?)', \
+for file in fileList:
+    if file == "*.txt":
+        with conn:
+            cur = conn.cursor()
+            cur.execute('INSERT INTO tbl_table(col_filenames) VALUES (?)', \
                     (file,))
-        conn.commit()
+            conn.commit()
 
 with conn:
     cur = conn.cursor()
