@@ -25,4 +25,4 @@ with conn:
     varFile = cur.fetchall()
     for item in varFile:
         msg = "File Name: {}".format(item[0])
-    print(msg)
+        print(msg)
