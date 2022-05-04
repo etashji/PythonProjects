@@ -9,8 +9,9 @@ with conn:
                 col_filenames TEXT)")
     conn.commit()
 
-import glob, os
-os.chdir("C:\\Users\\Eric Tashji\\Documents\\GitHub\\PythonProjects\\Files")
+fileList = ('information.docx', 'Hello.txt', 'myImage.png',\
+            'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
+import glob
 for file in glob.glob("*.txt"):
     with conn:
         cur = conn.cursor()
