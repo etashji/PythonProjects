@@ -12,7 +12,7 @@ with conn:
 fileList = ('information.docx', 'Hello.txt', 'myImage.png',\
             'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
 for file in fileList:
-    if file == "*.txt":
+    if file.endswith(".txt") == True:
         with conn:
             cur = conn.cursor()
             cur.execute('INSERT INTO tbl_table(col_filenames) VALUES (?)', \
