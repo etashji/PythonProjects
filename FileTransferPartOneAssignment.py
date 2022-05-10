@@ -9,19 +9,16 @@ class ParentWindow(Frame):
      #set where the source of the files are
     def source(self):
         global folder_path
-        source = filedialog.askdirectory()
-        folder_path.set(source)
-        files = os.listdir(source)
-        return files
+        folder_path = filedialog.askdirectory()
         
 
     def destination(self):
-        global folder_path
+        global destination
         destination = filedialog.askdirectory()
-        destination_path = folder_path.set(destination)
         
 
     def check (files):
+        files = os.listdir(folder_path)
         for i in files:
             time = os.path.getmtime(i)
             if time.hour <= 24:
