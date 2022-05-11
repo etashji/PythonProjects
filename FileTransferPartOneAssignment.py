@@ -20,9 +20,15 @@ class ParentWindow(Frame):
     def check (files):
         files = os.listdir(folder_path)
         for i in files:
-            time = os.path.getmtime(i)
-            if time.hour <= 24:
-                shutil.move(source+i, destination)
+            absolutePath = os.path.join(folder_path, i)
+            time = os.getmtime(absolutePath)
+            modTime = datetime.fromtimestamp(time)
+
+            current = datetime.now()
+            twentyFour = current - timedelta(hours = 24)
+
+            if modTime >= twentyFour:
+                shutil.move(absolutePath, destination)
 
     def __init__ (self, master):
         Frame.__init__ (self)
