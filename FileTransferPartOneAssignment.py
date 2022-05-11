@@ -1,8 +1,9 @@
 import shutil
-import os
+import os, time
 from tkinter import filedialog
 from tkinter import *
 import tkinter as tk
+from datetime import datetime, timedelta
 
 class ParentWindow(Frame):
 
@@ -18,17 +19,16 @@ class ParentWindow(Frame):
         
 
     def check (files):
-        files = os.listdir(folder_path)
-        for i in files:
-            absolutePath = os.path.join(folder_path, i)
-            time = os.getmtime(absolutePath)
+        for file in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, file)
+            time = os.path.getmtime(file_path)
             modTime = datetime.fromtimestamp(time)
 
             current = datetime.now()
             twentyFour = current - timedelta(hours = 24)
 
             if modTime >= twentyFour:
-                shutil.move(absolutePath, destination)
+                shutil.move(file_path, destination)
 
     def __init__ (self, master):
         Frame.__init__ (self)
