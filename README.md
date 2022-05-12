@@ -1,9 +1,9 @@
 # PythonProjects
 This is a repository for all of my Python projects.
 ## DjangoUniversity
-### This project is a university website which makes use of Django.
+#### This project is a university website which makes use of Django.
 ## PhoneBook
-### This is a phonebook TKinter GUI project.
+#### This is a phonebook TKinter GUI project.
 ## WebPageGenerator
 ### This is a web page generator using TKinter.
 ### AbstractSubmissionAssignment.py: This is an assignment which makes use of abstract methods.
