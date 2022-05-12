@@ -11,7 +11,6 @@ def home(request):
     return render(request, 'checkbook/index.html', content)
 
 def create_account(request):
-    return render(request, 'checkbook/CreateNewAccount.html')
     form = AccountForm(data = request.POST or None)
     if request.method == 'POST':
         form.save()
