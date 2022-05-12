@@ -5,7 +5,7 @@ This is a repository for all of my Python projects.
 ## PhoneBook
 #### This is a phonebook TKinter GUI project.
 ## WebPageGenerator
-### This is a web page generator using TKinter.
+#### This is a web page generator using TKinter.
 ## AbstractSubmissionAssignment.py: This is an assignment which makes use of abstract methods.
 ## ClassChallenge.py: This is a challenge to create a Person Class, and then print data to the console.
 ## DatabaseSubmissionAssignment.py: This is a project which uses SQL within Python.
