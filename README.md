@@ -11,4 +11,4 @@ This is a repository for all of my Python projects.
 ## DatabaseSubmissionAssignment.py: This is a project which uses SQL within Python.
 ## EncapsulationSubmissionAssignment.py: This is a project which makes use of encapsulation.
 ## FileTransferPartOneAssignment.py: This is an project which makes a TKinter GUI for a file transfer program.
-## 
+## HelloWorld.py: This is an assignment that prints "Hello World!" to the screen.
